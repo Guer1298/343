@@ -57,13 +57,17 @@
     <div class="formation" id="formation-container"></div>
   </main>
 
-  <!-- CARRITO / COLECCIÓN -->
-  <aside id="cart" class="cart">
-    <h3>🛒 Tu colección</h3>
-    <ul id="cart-items"></ul>
-    <p>Total: <span id="cart-total">$0</span></p>
-    <button onclick="checkout()" class="btn-checkout">Finalizar compra</button>
-  </aside>
+  <!-- TOGGLE PARA MÓVILES -->
+<div id="cart-toggle" class="cart-toggle" onclick="toggleCart()">🛒 Tu colección</div>
+
+<!-- CARRITO / COLECCIÓN -->
+<aside id="cart" class="cart">
+  <h3>🧠 Tu colección táctica</h3>
+  <ul id="cart-items"></ul>
+  <p>Total: <span id="cart-total">$0</span></p>
+  <button onclick="checkout()" class="btn-checkout">Finalizar compra</button>
+</aside>
+
 
   <!-- CTA AL CATÁLOGO -->
   <section class="catalog-link">
