@@ -1,0 +1,384 @@
+/* =============================
+   🎨 VARIABLES CSS GLOBALES
+============================= */
+:root {
+  --main-yellow: #f1c40f;
+  --main-orange: #f39c12;
+  --main-orange-dark: #e67e22;
+  --main-blue: #2980b9;
+  --main-blue-light: #3498db;
+  --main-green: #27ae60;
+  --main-green-light: #2ecc71;
+  --main-bg: rgba(0, 0, 0, 0.7);
+  --text-light: #eee;
+  --text-muted: #aaa;
+  --border-light: #ffffff22;
+  --highlight: #00ffcc;
+}
+
+/* =============================
+   🔄 RESET Y BASE
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: url('https://images.unsplash.com/photo-1603808033192-082d1b1e5c30') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text-light);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =============================
+   🧢 HEADER
+============================= */
+.main-header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 25px 15px;
+  text-align: center;
+  border-bottom: 2px solid var(--border-light);
+  backdrop-filter: blur(6px);
+}
+
+.main-header h1 {
+  font-size: 3.2em;
+  margin-bottom: 5px;
+  color: var(--main-yellow);
+  text-shadow: 2px 2px 4px #000;
+}
+
+.main-header p {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+.main-header small {
+  font-size: 0.9em;
+  color: var(--text-muted);
+}
+
+/* =============================
+   🧭 NAVEGACIÓN
+============================= */
+nav {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn,
+.btn-carrito {
+  background: var(--main-orange);
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover,
+.btn-carrito:hover,
+.btn:focus-visible,
+.btn-carrito:focus-visible {
+  background: var(--main-orange-dark);
+  color: #fff;
+  outline: none;
+}
+
+/* =============================
+   🧮 SELECTOR DE FORMACIÓN
+============================= */
+.formation-selector {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 600px;
+  background: var(--main-bg);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  backdrop-filter: blur(6px);
+}
+
+.formation-selector h2 {
+  margin-bottom: 15px;
+  color: var(--main-yellow);
+}
+
+.formation-selector .tip {
+  font-size: 1em;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.formation-selector select,
+.formation-selector input {
+  padding: 10px;
+  margin: 8px 5px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1em;
+  background-color: #fff;
+}
+
+.formation-selector input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.btn-agregar {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: var(--main-blue);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-agregar:hover,
+.btn-agregar:focus-visible {
+  background: var(--main-blue-light);
+  outline: none;
+}
+
+/* =============================
+   🏟️ CAMPO DE JUEGO
+============================= */
+.field {
+  display: grid;
+  place-items: center;
+  padding: 30px 10px;
+  flex-grow: 1;
+  background: 
+  repeating-linear-gradient(
+    to top,
+    #145a32 0px,
+    #145a32 80px,
+    #196f3d 80px,
+    #196f3d 160px
+  ),
+  linear-gradient(to bottom, #0b0c0f, #1a1c1f);
+
+  min-height: 60vh;
+  position: relative;
+  overflow-x: auto;
+}
+
+/* CONTENEDOR GENERAL DE LA FORMACIÓN */
+.formation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Alineación central más sólida */
+  gap: 30px;
+  max-width: 100%;
+  padding: 20px;
+  transition: transform 0.3s ease; /* Preparado para animaciones */
+}
+
+/* CADA LÍNEA DE JUGADORES (defensas, medios, delanteros) */
+.line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animación sutil al aparecer (puedes agregarla dinámicamente desde JS) */
+.line.appear {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+/* Keyframes para líneas que aparecen */
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* =============================
+   👕 CAMISETAS
+============================= */
+.shirt {
+  width: 75px;
+  height: 75px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #000000;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #333;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3), 0 0 10px rgba(255,255,255,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.shirt:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4), 0 0 12px rgba(255,255,255,0.2);
+}
+
+.shirt.selected {
+  border: 3px solid var(--highlight);
+  box-shadow: 0 0 12px var(--highlight), 0 0 25px rgba(0,255,204,0.6);
+}
+
+.shirt.limited {
+  animation: pulse 2s infinite;
+  border: 3px dashed gold;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+  }
+}
+
+/* =============================
+   🛒 CARRITO
+============================= */
+.cart {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 270px;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 15px black;
+  z-index: 1000;
+}
+
+.cart h3 {
+  margin-bottom: 15px;
+  color: var(--main-yellow);
+}
+
+.cart ul {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.cart li {
+  margin-bottom: 6px;
+  font-size: 0.95em;
+}
+
+.cart button {
+  background: var(--main-green);
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cart button:hover {
+  background: var(--main-green-light);
+}
+
+/* =============================
+   🔗 LINK AL CATÁLOGO
+============================= */
+.catalog-link {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.catalog-link a {
+  color: var(--main-yellow);
+  text-decoration: underline;
+  font-size: 1.1em;
+}
+
+/* =============================
+   📦 FOOTER
+============================= */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: var(--main-bg);
+  font-size: 0.95em;
+  color: #ccc;
+  border-top: 1px solid var(--border-light);
+}
+
+/* =============================
+   📱 RESPONSIVE
+============================= */
+@media (max-width: 768px) {
+  .shirt {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cart {
+    position: static;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .formation-selector {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  .formation {
+    align-items: center;
+  }
+
+  .btn-agregar {
+    width: 100%;
+  }
+
+  .cart {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 10;
+  }
+}

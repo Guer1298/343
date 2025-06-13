@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>La 343 - Camisetas Tácticas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="La 343 - Camisetas tácticas de fútbol con historia. Arma tu once ideal, personaliza tus camisetas y revive épocas legendarias del deporte rey.">
+  <meta name="author" content="La 343">
+  <link rel="icon" href="favicon.png" />
+</head>
+<body>
+  <!-- HEADER CON IDENTIDAD Y CTA -->
+  <header class="main-header">
+    <div class="logo-title">
+      <div>
+        <h1>La 343</h1>
+        <p>Camisetas en formación táctica</p>
+        <small>Para los que sienten el fútbol desde el once inicial 🧠⚽</small>
+      </div>
+    </div>
+    <nav>
+      <a href="catalogo.html" class="btn">📚 Catálogo</a>
+      <a href="carrito.html" class="btn-carrito">Ver Carrito 🛒</a>
+    </nav>
+  </header>
+
+  <!-- SELECTOR DE FORMACIÓN -->
+  <section class="formation-selector">
+    <h2>⚙️ Elige tu formación táctica</h2>
+    <p class="tip">
+      ¿Prefieres el vértigo de Guardiola o la solidez de Ancelotti?<br />
+      Arma tu once ideal y colecciona camisetas como si fueras el DT.
+    </p>
+    <select id="formation" onchange="renderFormation()">
+      <option value="4-3-3">🔥 4-3-3 - Ataque total (Barça 2009)</option>
+      <option value="3-4-3">⚡ 3-4-3 - Presión alta (Tuchel/Chelsea)</option>
+      <option value="4-4-2">🛡️ 4-4-2 - Clásica (Ferguson)</option>
+      <option value="5-3-2">🧱 5-3-2 - Muralla (Italia 2006)</option>
+    </select>
+
+    <!-- PERSONALIZACIÓN TÁCTICA -->
+    <div class="customization">
+      <input type="text" id="player-name" placeholder="Nombre del jugador" />
+      <input type="number" id="player-number" placeholder="Dorsal" min="1" max="99" />
+      <select id="shirt-style">
+        <option value="classic">Retro</option>
+        <option value="modern">Moderna</option>
+        <option value="limited">Edición limitada</option>
+      </select>
+      <button onclick="agregarCamiseta()" class="btn-agregar">➕ Añadir a tu once</button>
+    </div>
+  </section>
+
+  <!-- CAMPO DE JUEGO Y CAMISETAS -->
+  <main class="field">
+    <div class="formation" id="formation-container"></div>
+  </main>
+
+  <!-- CARRITO / COLECCIÓN -->
+  <aside id="cart" class="cart">
+    <h3>🛒 Tu colección</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: <span id="cart-total">$0</span></p>
+    <button onclick="checkout()" class="btn-checkout">Finalizar compra</button>
+  </aside>
+
+  <!-- CTA AL CATÁLOGO -->
+  <section class="catalog-link">
+    <a href="catalogo.html">📚 Ver catálogo completo por equipos y épocas</a>
+  </section>
+
+  <!-- FOOTER EMOCIONAL Y ESTRATÉGICO -->
+  <footer>
+    <p>© 2025 La 343. Porque el fútbol no solo se juega, también se viste.</p>
+    <small>Una marca hecha por y para los que creen que el fútbol también es memoria, pasión y estética.</small>
+  </footer>
+
+  <!-- TRACKING, FUNCIONALIDAD JS -->
+  <script src="script.js"></script>
+  <script>
+    // Google Analytics básico si se desea integrar
+    
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+    
+  </script>
+</body>
+</html>

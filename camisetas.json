@@ -1,0 +1,42 @@
+[
+  {
+    "jugador": "Zidane",
+    "epoca": "90s",
+    "equipo": "Juventus",
+    "nombre": "Zidane 97",
+    "img": "https://i.imgur.com/1Wf0UJ3.png",
+    "limitada": true
+  },
+  {
+    "jugador": "Maradona",
+    "epoca": "80s",
+    "equipo": "Napoli",
+    "nombre": "Maradona 89",
+    "img": "https://i.imgur.com/f5sGiBb.png",
+    "limitada": false
+  },
+  {
+    "jugador": "Ronaldinho",
+    "epoca": "2000s",
+    "equipo": "Barcelona",
+    "nombre": "Ronaldinho 2006",
+    "img": "https://i.imgur.com/OjcQ1Ju.png",
+    "limitada": true
+  },
+  {
+    "jugador": "Zidane",
+    "epoca": "2000s",
+    "equipo": "Real Madrid",
+    "nombre": "Zidane Galáctico",
+    "img": "https://i.imgur.com/jstDUNM.png",
+    "limitada": false
+  },
+  {
+    "jugador": "Maradona",
+    "epoca": "90s",
+    "equipo": "Boca",
+    "nombre": "Maradona Boca",
+    "img": "https://i.imgur.com/AYgPrZW.png",
+    "limitada": false
+  }
+]
